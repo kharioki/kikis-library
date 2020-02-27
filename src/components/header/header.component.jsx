@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./header.styles.scss";
 
 import { ReactComponent as Logo } from "../../assets/crown.svg";
-import { ReactComponent as CartIcon } from "../../assets/shopping-bag.svg";
+import CartIcon from "../cart-icon/cart-icon.component";
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
-const Header = () => (
-  <div className="header">
-    <Logo className="logo" />
-    <div className="options">
-      <CartIcon />
+const Header = () => {
+  const [hidden, setHidden] = useState(false);
+  return (
+    <div className="header">
+      <Logo className="logo" />
+      <div className="options">
+        <CartIcon onClick={() => setHidden(!hidden)} />
+      </div>
+      {hidden ? null : <CartDropdown />}
     </div>
-  </div>
-);
+  );
+};
 
 export default Header;
