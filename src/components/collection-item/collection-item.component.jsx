@@ -16,7 +16,7 @@ const CollectionItem = ({ item }) => {
       <div className="collection-footer">
         <span className="name">{name}</span>
       </div>
-      {/* <CustomButton>ADD TO CART</CustomButton> */}
+      <CustomButton inverted>Add to Basket</CustomButton>
     </div>
   );
 };

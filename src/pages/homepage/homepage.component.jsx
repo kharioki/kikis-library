@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import './homepage.styles.scss';
+import "./homepage.styles.scss";
 
-import LIBRARY_DATA from '../../utils/library-data';
+import LIBRARY_DATA from "../../utils/library-data";
 
-import Collection from '../../components/collection/collection.component';
+import Collection from "../../components/collection/collection.component";
 
 const Homepage = () => (
-    <div className='homepage'>
-        <Collection collection={LIBRARY_DATA} />
-    </div>
+  <div className="homepage">
+    <Collection collection={LIBRARY_DATA} />
+  </div>
 );
 
 export default Homepage;
