@@ -1,7 +1,7 @@
 .cart-dropdown {
   position: absolute;
   width: 300px;
-  height: 80vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -11,18 +11,45 @@
   right: 40px;
   z-index: 5;
 
+  .checkout-header {
+    width: 100%;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid darkgrey;
+
+    .book .price {
+      text-transform: capitalize;
+      width: 20%;
+    }
+    .period {
+      text-transform: capitalize;
+      width: 33%;
+    }
+    .period {
+      width: 15%;
+    }
+  }
+
   .cart-items {
-    height: 60vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     overflow: scroll;
   }
 
-  .cart-totals {
-    height: 240px;
+  .total {
+    margin-top: 20px;
+    margin-left: auto;
+    font-size: 30px;
+  }
+
+  .cart-rates {
+    height: 120px;
     display: flex;
     flex-direction: column;
-    border: 1px solid gray;
+    border: 1px solid #e2e2e2;
+    padding: 10px;
   }
 
   button {

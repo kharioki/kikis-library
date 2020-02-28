@@ -38,7 +38,14 @@ const CartItem = ({ cartItem, clearItem, addItem, removeItem }) => {
         </span>
       </span>
       <span className="price">$ {calculateRate(days, 1)}</span>
-      <div className="remove-button">&#10005;</div>
+      <span
+        className="remove-button"
+        role="img"
+        aria-label="minus"
+        onClick={() => clearItem(cartItem)}
+      >
+        &#10005;
+      </span>
     </div>
   );
 };
