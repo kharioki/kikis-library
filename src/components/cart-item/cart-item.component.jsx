@@ -5,7 +5,7 @@ import "./cart-item.styles.scss";
 import { calculateRate } from "../../utils/calculate-rate";
 
 const CartItem = ({ cartItem, clearItem, addItem, removeItem }) => {
-  const { imageUrl, days } = cartItem;
+  const { imageUrl, days, type } = cartItem;
   return (
     <div className="checkout-item">
       <div className="image-container">
@@ -30,7 +30,7 @@ const CartItem = ({ cartItem, clearItem, addItem, removeItem }) => {
           &#10134;
         </span>
       </span>
-      <span className="price">$ {calculateRate(days, 1)}</span>
+      <span className="price">$ {calculateRate(days, type)}</span>
       <span
         className="remove"
         role="img"

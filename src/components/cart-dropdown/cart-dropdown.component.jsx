@@ -35,11 +35,13 @@ const CartDropdown = ({ cartItems }) => (
       ))}
     </div>
     {cartItems && (
-      <div className="total">TOTAL: ${calculateTotals(cartItems, 1)}</div>
+      <div className="total">TOTAL: ${calculateTotals(cartItems)}</div>
     )}
     <div className="cart-rates">
       <span>Book rates:</span>
-      <span>All books: $1 per day</span>
+      <span>Regular books: $1.5 per day</span>
+      <span>Fiction books: $3 per day</span>
+      <span>Novel books: $1.5 per day</span>
     </div>
     <CustomButton>GO TO CHECKOUT</CustomButton>
   </div>
