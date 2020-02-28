@@ -16,14 +16,13 @@
       height: 100%;
     }
   }
-  .name,
-  .quantity,
   .price {
-    width: 23%;
+    width: 20%;
   }
 
   .quantity {
     display: flex;
+    width: 40%;
 
     .arrow {
       cursor: pointer;
@@ -35,7 +34,7 @@
   }
 
   .remove-button {
-    padding-left: 12px;
+    padding-left: 6px;
     cursor: pointer;
   }
 }
