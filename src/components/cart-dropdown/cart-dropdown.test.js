@@ -14,4 +14,11 @@ describe("CartDropdown tests", () => {
   it("should render CartDropdown component", () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it("should render cart empty message if cartItems is empty", () => {
+    const mockCartItems = [];
+
+    const newWrapper = shallow(<CartDropdown cartItems={mockCartItems} />);
+    expect(newWrapper.exists(".empty-message")).toBe(true);
+  });
 });

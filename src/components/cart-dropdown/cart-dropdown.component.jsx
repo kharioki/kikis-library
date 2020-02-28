@@ -25,7 +25,9 @@ const CartDropdown = ({ cartItems }) => (
         </div>
       </div>
     ) : (
-      <span>You do not have any books in your basket!!</span>
+      <span className="empty-message">
+        You do not have any books in your basket!!
+      </span>
     )}
     <div className="cart-items">
       {cartItems.map(cartItem => (

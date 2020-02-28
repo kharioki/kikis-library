@@ -32,7 +32,7 @@ const CartItem = ({ cartItem, clearItem, addItem, removeItem }) => {
       </span>
       <span className="price">$ {calculateRate(days, 1)}</span>
       <span
-        className="remove-button"
+        className="remove"
         role="img"
         aria-label="minus"
         onClick={() => clearItem(cartItem)}
