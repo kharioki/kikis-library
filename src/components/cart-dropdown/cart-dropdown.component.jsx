@@ -39,9 +39,9 @@ const CartDropdown = ({ cartItems }) => (
     )}
     <div className="cart-rates">
       <span>Book rates:</span>
-      <span>Regular books: $1.5 per day</span>
+      <span>Regular books: $1 first 2days, $1.5 thereafter, min $2</span>
       <span>Fiction books: $3 per day</span>
-      <span>Novel books: $1.5 per day</span>
+      <span>Novel books: $1 first 3days, $1.5 thereafter, min $4.5</span>
     </div>
     <CustomButton>GO TO CHECKOUT</CustomButton>
   </div>
