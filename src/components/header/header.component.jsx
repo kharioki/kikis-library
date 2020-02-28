@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import "./header.styles.scss";
 
 import { ReactComponent as Logo } from "../../assets/crown.svg";
-import CartIcon from "../cart-icon/cart-icon.component";
-import CartDropdown from "../cart-dropdown/cart-dropdown.component";
+import CartIconContainer from "../cart-icon/cart-icon.container";
+import CartDropdownContainer from "../cart-dropdown/cart-dropdown.container";
 
 const Header = () => {
   const [hidden, setHidden] = useState(false);
@@ -12,9 +12,9 @@ const Header = () => {
     <div className="header">
       <Logo className="logo" />
       <div className="options">
-        <CartIcon onClick={() => setHidden(!hidden)} />
+        <CartIconContainer onClick={() => setHidden(!hidden)} />
       </div>
-      {hidden ? null : <CartDropdown />}
+      {hidden ? null : <CartDropdownContainer />}
     </div>
   );
 };

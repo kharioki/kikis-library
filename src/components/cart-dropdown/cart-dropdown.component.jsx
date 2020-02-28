@@ -1,8 +1,7 @@
 import React from "react";
-import { connect } from "react-redux";
 
 import CustomButton from "../custom-button/custom-button.component";
-import CartItem from "../cart-item/cart-item.component";
+import CartItemContainer from "../cart-item/cart-item.container";
 
 import { calculateTotals } from "../../utils/calculate-rate";
 
@@ -30,7 +29,7 @@ const CartDropdown = ({ cartItems }) => (
     )}
     <div className="cart-items">
       {cartItems.map(cartItem => (
-        <CartItem key={cartItem.id} cartItem={cartItem} />
+        <CartItemContainer key={cartItem.id} cartItem={cartItem} />
       ))}
     </div>
     {cartItems && (
@@ -44,8 +43,4 @@ const CartDropdown = ({ cartItems }) => (
   </div>
 );
 
-const mapStateToProps = ({ cart: { cartItems } }) => ({
-  cartItems
-});
-
-export default connect(mapStateToProps)(CartDropdown);
+export default CartDropdown;

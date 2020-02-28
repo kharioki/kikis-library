@@ -1,13 +1,6 @@
 import React from "react";
-import { connect } from "react-redux";
 
 import "./cart-item.styles.scss";
-
-import {
-  clearItemFromCart,
-  addItem,
-  removeItem
-} from "../../redux/cart/cart.actions";
 
 import { calculateRate } from "../../utils/calculate-rate";
 
@@ -50,10 +43,4 @@ const CartItem = ({ cartItem, clearItem, addItem, removeItem }) => {
   );
 };
 
-const mapDispatchToProps = dispatch => ({
-  clearItem: item => dispatch(clearItemFromCart(item)),
-  addItem: item => dispatch(addItem(item)),
-  removeItem: item => dispatch(removeItem(item))
-});
-
-export default connect(null, mapDispatchToProps)(CartItem);
+export default CartItem;
